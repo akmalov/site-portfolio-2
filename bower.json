@@ -1,0 +1,13 @@
+{
+  "name": "Akmalov-builder",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}
