@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = [
-  './dev/js/app.js'
+  './dev/js/main.js'
 ];

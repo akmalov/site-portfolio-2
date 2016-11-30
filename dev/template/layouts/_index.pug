@@ -4,20 +4,15 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    title #{title}
-    meta(content="" name="author")
-    meta(content="" name="description")
-    meta(content="" name="keywords")
     meta(content="width=device-width, initial-scale=1" name="viewport")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
+    block title
 
     //- favicon block start
     //- favicon block end
 
-    link(rel='stylesheet' href='css/foundation.css')
-    link(rel='stylesheet' href='css/app.css')
-    script(src='js/foundation.js' defer)
-    script(src='js/app.js' defer)
+    link(rel='stylesheet' href='css/vendor.css')
+    link(rel='stylesheet' href='css/main.css')
 
     <!--[if lt IE 9]>
     script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
@@ -25,3 +20,6 @@ html
 
   body
     block content
+
+    script(src='js/vendor.js' defer)
+    script(src='js/main.js' defer)

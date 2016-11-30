@@ -1,7 +1,21 @@
-extends ../_template
+extends ../layouts/_index
 
-block variables
-  - var title = 'Home page'
+block title
+  title Добро пожаловать
 
 block content
-  include ../common/_greating
+  .btn.btn_auth Авторизоваться
+
+  .welcome-container
+    .welcome-container__photo
+      img.photo__image(src='#',alt='Моё фото')
+    .welcome-container__title
+      .title__name Сергей Акмалов
+      .title__desc Личный сайт веб разработчика
+    .welcome-container__socials
+    .welcome-container__links
+      ul.links__list
+        li.link__item: a.links__link(href='works') Мои работы
+        li.link__item: a.links__link(href='about') Обо мне
+        li.link__item: a.links__link(href='blog') Блог
+  .welcome-footer Сергей Акмалов | создано с любовью в Loftschool | 2016
