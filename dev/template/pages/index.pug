@@ -1,21 +1,36 @@
-extends ../layouts/_index
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        title Добро пожаловать
 
-block title
-  title Добро пожаловать
+        //- favicon block start
+        //- favicon block end
 
-block content
-  .btn.btn_auth Авторизоваться
+        link(rel='stylesheet' href='css/vendor.css')
+        link(rel='stylesheet' href='css/main.css')
 
-  .welcome-container
-    .welcome-container__photo
-      img.photo__image(src='#',alt='Моё фото')
-    .welcome-container__title
-      .title__name Сергей Акмалов
-      .title__desc Личный сайт веб разработчика
-    .welcome-container__socials
-    .welcome-container__links
-      ul.links__list
-        li.link__item: a.links__link(href='works') Мои работы
-        li.link__item: a.links__link(href='about') Обо мне
-        li.link__item: a.links__link(href='blog') Блог
-  .welcome-footer Сергей Акмалов | создано с любовью в Loftschool | 2016
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+
+    body
+
+      .btn.btn_auth Авторизоваться
+
+      .welcome
+        .welcome__photo-title
+          include ../components/_header-photo-title
+        .welcome__socials
+          include ../components/_socials
+        .welcome__tabs
+          ul.tabs__list
+            li.tabs__item: a.tabs__link(href='works.html') Мои работы
+            li.tabs__item: a.tabs__link(href='about.html') Обо мне
+            li.tabs__item: a.tabs__link(href='blog.html') Блог
+      .welcome-footer Сергей Акмалов | создано с любовью в Loftschool | 2016
+
+      script(src='js/vendor.js' defer)
+      script(src='js/main.js' defer)

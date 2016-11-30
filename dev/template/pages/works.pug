@@ -1,0 +1,69 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        title Мои работы
+
+        //- favicon block start
+        //- favicon block end
+
+        link(rel='stylesheet' href='css/vendor.css')
+        link(rel='stylesheet' href='css/main.css')
+
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+
+    body
+
+    header.header
+        .container
+            include ../parts/_header-top
+            include ../parts/_header-bottom
+    section.my-works
+        h1.section-title Мои работы
+    .container
+        .my-works__left
+            h2.article-title Сайт школы онлайн образования
+            p.article-text HTML, CSS, Javascript
+            .btn.btn_works Посмотреть сайт
+        .my-works__right
+            .my-works__work
+            .my-works__prev
+            .my-works__next
+    section.what-about
+        h1.section-title Что обо мне говорят
+        .what-about__left
+            .what-about__photo
+                img.what-about__image(src='#',alt='Дима')
+            .what-about__comment
+            |Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+            .what-about__sign
+                .sign__top
+                |Ковальчук Дмитрий
+                .sign__bottom
+                |- основатель Loftschool
+        .what-about__right
+            .what-about__photo
+                img.what-about__image(src='#',alt='Зар')
+            .what-about__comment
+            |Этот код выдержит любые испытания. Только пожалуй сайт не загружается слишком старых браузерах!
+            .what-about__sign
+                .sign__top
+                | Зар Захаров
+                .sign__bottom
+                | - преподаватель
+        h2.article-title
+        .form
+            form.contact
+                input.name(placeholder="Имя")
+                input.email(placeholder="Email")
+                textarea(placeholder="Ваше сообщение")
+            ul.tabs__list
+                li.tabs__item: a.tabs__link(href='#') Отправить
+                li.tabs__item: a.tabs__link(href='#') Очистить
+    include ../parts/_footer
+    script(src='js/vendor.js' defer)
+    script(src='js/main.js' defer)
