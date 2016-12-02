@@ -18,7 +18,8 @@ html
 
     body
 
-      .btn.btn_auth Авторизоваться
+      .btn.btn_auth
+        .btn__container Авторизоваться
 
       .welcome
         .welcome__photo-title
@@ -26,10 +27,7 @@ html
         .welcome__socials
           include ../components/_socials
         .welcome__tabs
-          ul.tabs__list
-            li.tabs__item: a.tabs__link(href='works.html') Мои работы
-            li.tabs__item: a.tabs__link(href='about.html') Обо мне
-            li.tabs__item: a.tabs__link(href='blog.html') Блог
+          include ../components/_tabs
       .welcome-footer Сергей Акмалов | создано с любовью в Loftschool | 2016
 
       script(src='js/vendor.js' defer)

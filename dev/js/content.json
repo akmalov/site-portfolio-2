@@ -1,0 +1,34 @@
+{
+  "icons" : {
+    "vk" : "http://vk.com",
+    "github" : "http://github.com",
+    "in" : "http://linkedin.com"
+  },
+
+  "tabs" : {
+    "Мои работы" : "works.html",
+    "Обо мне" : "about.html",
+    "Блог" : "blog.html"
+  },
+
+  "links" : {
+    "Мои работы" : "works.html",
+    "Обо мне" : "about.html",
+    "Блог" : "blog.html",
+    "Авторизация" : "auth.html"
+  },
+
+  "contacts" : {
+    "skype" : "callto:skype",
+    "gmail@gmail.com" : "mailto:gmail@gmail.com",
+    "+7 912 345 67 89" : "tel:+79123456789",
+    "Санкт-Петербург": "Санкт-Петербург"
+  },
+
+  "nav" : {
+    "1" : "#",
+    "2" : "#",
+    "3" : "#",
+    "4": "#"
+  }
+}

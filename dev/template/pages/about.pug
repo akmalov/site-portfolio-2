@@ -4,7 +4,7 @@ html
         meta(charset="utf-8")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
-        title Мои работы
+        title Обо мне
 
         //- favicon block start
         //- favicon block end
@@ -40,12 +40,10 @@ html
                 h3 Workflow
         section.map
             h2.article-title
-            ul.contacts__list
-                li.contacts__item: a.contacts__link(href='#') skype
-                li.contacts__item: a.contacts__link(href='#') Мыло
-                li.contacts__item: a.contacts__link(href='#') Телефон
-                li.contacts__item: a.contacts__link(href='#') Адрес
-
+            ul.contacts
+                each href, title in contacts
+                    li.contacts__item
+                        a(href=`${href}`).contacts__link= title
         include ../parts/_footer
         script(src='js/vendor.js' defer)
         script(src='js/main.js' defer)

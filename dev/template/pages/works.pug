@@ -56,14 +56,14 @@ html
                     .sign__bottom
                     | - преподаватель
             h2.article-title
-            .form
-                form.contact
-                    input.name(placeholder="Имя")
-                    input.email(placeholder="Email")
+            .contact
+                form.contact__form
+                    input.form__name(name="" type="text" placeholder="Имя")
+                    input.form__email(name="" type="text" placeholder="Email")
                     textarea(placeholder="Ваше сообщение")
-                ul.tabs__list
-                    li.tabs__item: a.tabs__link(href='#') Отправить
-                    li.tabs__item: a.tabs__link(href='#') Очистить
+                    .contact__tabs
+                        input.tabs__submit(name"" type="submit" value="Отправить")
+                        input.tabs__submit(name"" type="reset" value="Очистить")
         include ../parts/_footer
         script(src='js/vendor.js' defer)
         script(src='js/main.js' defer)

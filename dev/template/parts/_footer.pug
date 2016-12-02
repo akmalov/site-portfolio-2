@@ -3,11 +3,10 @@ footer.footer
         .footer__left Этот сайт я сделал в рамках обучения в школе Loftschool.
         .footer__center
             .center-top
-                ul.links__list
-                    li.link__item: a.links__link(href='works.html') Мои работы
-                    li.link__item: a.links__link(href='about.html') Обо мне
-                    li.link__item: a.links__link(href='blog.html') Блог
-                    li.link__item: a.links__link(href='auth.html') Авторизация
+                ul.links
+                    each href, title in links
+                        li.links__item
+                            a(href=`${href}`).links__link= title
             .center-bottom
                 include ../components/_socials
         .footer__right

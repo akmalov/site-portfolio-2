@@ -1,5 +1,5 @@
-nav.blog-nav
-    a.nav-link(href='#')
-    a.nav-link(href='#')
-    a.nav-link(href='#')
-    a.nav-link(href='#')
+nav.nav
+    ul.nav__list
+        each href, title in nav
+            li(class="nav__item nav__item_" + ( (title == "1") ? 'active' : ''))
+                a(href=`${href}`).nav__link= title
