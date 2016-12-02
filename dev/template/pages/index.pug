@@ -17,18 +17,18 @@ html
         <![endif]-->
 
     body
+        .welcome
+            a(href="#").btn.btn_auth
+                .btn__container Авторизоваться
 
-      .btn.btn_auth
-        .btn__container Авторизоваться
+            .welcome__container
+                .welcome__photo-title
+                    include ../components/_header-photo-title
+                .welcome__socials
+                    include ../components/_socials
+                .welcome__tabs
+                    include ../components/_tabs
+            .welcome__footer Сергей Акмалов | создано с любовью в Loftschool | 2016
 
-      .welcome
-        .welcome__photo-title
-          include ../components/_header-photo-title
-        .welcome__socials
-          include ../components/_socials
-        .welcome__tabs
-          include ../components/_tabs
-      .welcome-footer Сергей Акмалов | создано с любовью в Loftschool | 2016
-
-      script(src='js/vendor.js' defer)
-      script(src='js/main.js' defer)
+        script(src='js/vendor.js' defer)
+        script(src='js/main.js' defer)

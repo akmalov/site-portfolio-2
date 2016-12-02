@@ -1,0 +1,96 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: url('../img/bg/water.jpg') center center / cover no-repeat;
+  color: #fff;
+
+  &__container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+    height: 395px;
+    min-height: 395px;
+    text-align: center;
+    background-color: rgba(18, 38, 32, 0.6);
+    margin-bottom: 30px;
+  }
+
+  &__photo-title {
+    align-self: center;
+    margin-top: 40px;
+  }
+
+  .photo {
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    background: url("../img/content/my-photo.jpg") left top / cover no-repeat;
+    margin-bottom: 20px;
+  }
+
+  .title {
+
+    &__name {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 1.241;
+    }
+
+    &__desc {
+      line-height: 1.5;
+    }
+  }
+
+  .tabs {
+
+    &__list {
+      font-size: 0;
+    }
+
+    &__item {
+      display: inline-block;
+      background: #608e54;
+      border-right: 2px solid #a0ba9e;
+      padding: 0 31px;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        background: #4a803a;
+        transition: background 0.3s;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 2.25;
+      color: #fff;
+    }
+  }
+
+  &__footer {
+    align-self: center;
+    margin-bottom: 40px;
+  }
+}
+
+
+.btn_auth {
+  align-self: flex-end;
+  margin: 24px 70px 0 0;
+  border: 1px #fff solid;
+
+  &:hover {
+    background: $green;
+    transition: background 0.3s;
+  }
+}

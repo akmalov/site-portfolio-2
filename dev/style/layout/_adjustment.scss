@@ -1,3 +1,8 @@
+$light-green: #6c9c5a;
+$green: #6c9c5a;
+$swampy-green: #566358;
+$dark-green: #373e42;
+
 * {
   box-sizing: border-box;
 }
@@ -11,9 +16,9 @@ html, body {
 
 body {
   background: #fff;
-  line-height: 1.42;
-  font-family: Roboto;
-  color: #414141;
+  font: 16px/1.42 Roboto, sans-serif;
+  font-weight: 400;
+  color: $swampy-green;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -41,7 +46,6 @@ body {
   background: #ccc;
   color: #000;
   position: relative;
-  font-size: 0;
 }
 
 ul {
@@ -70,4 +74,15 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.btn {
+  min-height: 45px;
+  font-size: 16px;
+  font-family: Roboto;
+  color: #fff;
+  line-height: 2.2575;
+  border-radius: 40px;
+  padding: 2px 28px;
+  overflow: hidden;
 }
