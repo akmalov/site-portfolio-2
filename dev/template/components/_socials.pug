@@ -1,5 +1,7 @@
-ul.socials
+ul.socials__list
     each href, title in icons
-        li(class="socials__item socials__item_" + title)
+        li.socials__item
             a(href=`${href}`).socials__link
                 .socials__icon
+                    svg(class="icon icon_" + title)
+                        use(xlink:href="img/icons/socials.svg#" + title)

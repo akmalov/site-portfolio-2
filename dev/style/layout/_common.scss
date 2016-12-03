@@ -1,0 +1,83 @@
+.btn {
+  min-height: 45px;
+  font-size: 16px;
+  font-family: Roboto;
+  color: #fff;
+  line-height: 2.2575;
+  border-radius: 40px;
+  padding: 2px 28px;
+  overflow: hidden;
+}
+
+.icon {
+  fill: #90a09a;
+
+  &_vk {
+    width: 31px;
+    height: 17px;
+  }
+
+  &_github {
+    width: 26px;
+    height: 22px;
+  }
+
+  &_in {
+    width: 24px;
+    height: 22px;
+  }
+}
+
+.socials {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+
+      .icon {
+        fill: $green;
+      }
+    }
+  }
+}
+
+.tabs {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    background: #608e54;
+    border-right: 2px solid #a0ba9e;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background: #4a803a;
+      transition: background 0.2s;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 0 31px;
+    font-size: 16px;
+    line-height: 2.25;
+    color: #fff;
+  }
+}
