@@ -1,0 +1,40 @@
+.about {
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    .section-title {
+      width: 360px;
+    }
+
+    .who {
+      width: 460px;
+    }
+  }
+
+  &__right {
+    width: 860px;
+  }
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .footer {
+    width: 100%;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
