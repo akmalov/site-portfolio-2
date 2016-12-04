@@ -17,53 +17,53 @@ html
         <![endif]-->
 
     body
-
-        header.header
-            .container
-                include ../parts/_header-top
-                include ../parts/_header-bottom
-        section.my-works
-            h1.section-title Мои работы
-            .container
-                .my-works__left
-                    h2.article-title Сайт школы онлайн образования
-                    p.article-text HTML, CSS, Javascript
-                    .btn.btn_works Посмотреть сайт
-                .my-works__right
-                    .my-works__work
-                    .my-works__prev
-                    .my-works__next
-        section.what-about
-            h1.section-title Что обо мне говорят
-            .what-about__left
-                .what-about__photo
-                    img.what-about__image(src='#',alt='Дима')
-                .what-about__comment
-                |Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                .what-about__sign
-                    .sign__top
-                    |Ковальчук Дмитрий
-                    .sign__bottom
-                    |- основатель Loftschool
-            .what-about__right
-                .what-about__photo
-                    img.what-about__image(src='#',alt='Зар')
-                .what-about__comment
-                |Этот код выдержит любые испытания. Только пожалуй сайт не загружается в слишком старых браузерах!
-                .what-about__sign
-                    .sign__top
-                    | Зар Захаров
-                    .sign__bottom
-                    | - преподаватель
-            h2.article-title
-            .contact
-                form.contact__form
-                    input.form__name(name="" type="text" placeholder="Имя")
-                    input.form__email(name="" type="text" placeholder="Email")
-                    textarea(placeholder="Ваше сообщение")
-                    .contact__tabs
-                        input.tabs__submit(name"" type="submit" value="Отправить")
-                        input.tabs__submit(name"" type="reset" value="Очистить")
-        include ../parts/_footer
+        .wrapper
+            header.header
+                .container
+                    include ../parts/_header__top
+                    include ../parts/_header__bottom
+            section.my-works
+                h1.section-title Мои работы
+                .container
+                    .my-works__left
+                        h2.article-title Сайт школы онлайн образования
+                        p.article-text HTML, CSS, Javascript
+                        .btn.btn_works Посмотреть сайт
+                    .my-works__right
+                        .my-works__work
+                        .my-works__prev
+                        .my-works__next
+            section.what-about
+                h1.section-title Что обо мне говорят
+                .what-about__left
+                    .what-about__photo
+                        img.what-about__image(src='#',alt='Дима')
+                    .what-about__comment
+                    |Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                    .what-about__sign
+                        .sign__top
+                        |Ковальчук Дмитрий
+                        .sign__bottom
+                        |- основатель Loftschool
+                .what-about__right
+                    .what-about__photo
+                        img.what-about__image(src='#',alt='Зар')
+                    .what-about__comment
+                    |Этот код выдержит любые испытания. Только пожалуй сайт не загружается в слишком старых браузерах!
+                    .what-about__sign
+                        .sign__top
+                        | Зар Захаров
+                        .sign__bottom
+                        | - преподаватель
+                .contact
+                    h2.article-title
+                    form.contact__form
+                        input.form__name(name="" type="text" placeholder="Имя")
+                        input.form__email(name="" type="text" placeholder="Email")
+                        textarea(placeholder="Ваше сообщение")
+                        .contact__tabs
+                            input.tabs__submit(name"" type="submit" value="Отправить")
+                            input.tabs__submit(name"" type="reset" value="Очистить")
+            include ../parts/_footer
         script(src='js/vendor.js' defer)
         script(src='js/main.js' defer)

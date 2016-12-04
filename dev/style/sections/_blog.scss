@@ -1,0 +1,54 @@
+.header__bottom_blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.blog {
+  color: #455a64;
+  background-color: #faf8f0;
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 65px;
+  }
+
+  .nav {
+    width: 360px;
+    margin-right: 100px;
+
+    &__list {
+      text-align: right;
+    }
+
+    &__item_active {
+
+      .nav__link {
+        color: $green;
+        font-weight: 700;
+      }
+    }
+
+    &__link {
+      display: block;
+      padding: 14px 18px;
+      color: #455a64;
+      line-height: 1.625;
+    }
+  }
+
+  .blog__main {
+    width: 1000px;
+  }
+
+  .blog__date {
+    color: $green;
+    line-height: 2.5625;
+  }
+
+  .blog__record {
+    line-height: 1.625;
+  }
+}

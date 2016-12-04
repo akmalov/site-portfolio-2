@@ -17,33 +17,33 @@ html
         <![endif]-->
 
     body
-
-        header.header
-            .container
-                include ../parts/_header-top
-                include ../parts/_header-bottom
-        section.about
-            .about__left
-                h1.section-title Обо мне
-                article.who
-                    .who__photo
-                        .who__image
-                    h2.article-title Чем я могу быть вам полезен
-                    .who__text
-                    p Я веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проектыю
-                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём контент. А пока посмотрите, как всё тут классно и красиво
-            .about__right
+        .wrapper
+            header.header
+                .container
+                    include ../parts/_header__top
+                    include ../parts/_header__bottom
+            section.about
+                .about__left
+                    h1.section-title Обо мне
+                    article.who
+                        .who__photo
+                            .who__image
+                        h2.article-title Чем я могу быть вам полезен
+                        .who__text
+                        p Я веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проектыю
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём контент. А пока посмотрите, как всё тут классно и красиво
+                .about__right
+                    h2.article-title
+                    p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+                    h3 Frontend
+                    h3 Backend
+                    h3 Workflow
+            section.map
                 h2.article-title
-                p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
-                h3 Frontend
-                h3 Backend
-                h3 Workflow
-        section.map
-            h2.article-title
-            ul.contacts
-                each href, title in contacts
-                    li.contacts__item
-                        a(href=`${href}`).contacts__link= title
-        include ../parts/_footer
+                ul.contacts
+                    each href, title in contacts
+                        li.contacts__item
+                            a(href=`${href}`).contacts__link= title
+            include ../parts/_footer
         script(src='js/vendor.js' defer)
         script(src='js/main.js' defer)

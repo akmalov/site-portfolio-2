@@ -23,29 +23,15 @@ body {
 }
 
 .wrapper {
-  min-height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.wrapper:after {
-  content: "";
-  display: block;
-  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .container {
   width: 1740px;
   margin: 0 auto;
-  position: relative;
-}
-
-.footer {
-  height: 50px;
-  margin-top: -50px;
-  background: #ccc;
-  color: #000;
-  position: relative;
 }
 
 ul {

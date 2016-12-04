@@ -17,15 +17,28 @@ html
         <![endif]-->
 
     body
+        .wrapper
+            header.header
+                .container
+                    include ../parts/_header__top
+                    .header__bottom_blog
+                        .header__photo
+                        h1.section-title Блог
+                        .blog-desc статьи, которые я написал
+                        a.down-scroll(href='#')
+                            img.down-scroll__image(src='#')
+            section.blog
+                .container
+                    include ../parts/_nav
+                    main.blog__main
+                        article.blog__article
+                            h2.article-title Что такое Sass и зачем он нужен
+                            .blog__date 22 ноября 2016 г.
+                            .blog__record
+                                p Sass (Syntactically Awesome Stylesheets) — это скриптовый метаязык, который компилируется в обычные CSS-стили. В 2007-м появилась первая версия SASS, разработанная Гемптоном Кетлином. У языка есть два основных “начертания”: SASS и более новый SCSS. Отличия между ними небольшие, тем не менее нарушение правил синтаксиса не позволит скомпилировать файл. В SASS-синтаксисе нет фигурных скобок, вложенность элементов в нем реализована при помощи отступов, а стилевые правила обязательно отделены новыми строками. Независимо от синтаксиса, SCSS обратно совместим с CSS. То есть любой CSS обязательно будет валидным SCSS-кодом.
+                                p Sass позволяет назначать переменные — и это одно из ключевых преимуществ. Переменная, по аналогии с php, начинается со знака доллара ($), значения присваиваются при помощи двоеточия.
+                                p Sass позволяет вкладывать правила CSS друг в друга. Вложенные правила применяются только для элементов, соответствующих внешним селекторам. Это помогает избежать повторения родительских селекторов, и делает сложные CSS макеты с большим количеством вложенных селекторов гораздо проще.
 
-        header.header
-            .container
-                include ../parts/_header-top
-                h1.section-title Блог
-                .blog-desc статьи, которые я написал
-        section.blog-main
-            include ../parts/_nav
-            main.blog-main
-        include ../parts/_footer
-        script(src='js/vendor.js' defer)
-        script(src='js/main.js' defer)
+            include ../parts/_footer
+            script(src='js/vendor.js' defer)
+            script(src='js/main.js' defer)

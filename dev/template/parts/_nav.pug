@@ -1,5 +1,5 @@
 nav.nav
     ul.nav__list
         each href, title in nav
-            li(class="nav__item nav__item_" + ( (title == "1") ? 'active' : ''))
+            li(class="nav__item nav__item_" + ( (title == "Что такое Sass и зачем он нужен") ? 'active' : ''))
                 a(href=`${href}`).nav__link= title
