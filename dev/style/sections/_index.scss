@@ -1,3 +1,19 @@
+.btn_auth {
+  align-self: flex-end;
+  margin: 2.4rem 7rem 3.5rem 0;
+  border: 0.1rem #fff solid;
+
+  @media (max-width: 480px) {
+    align-self: center;
+    margin: 2.4rem 0 3.5rem;
+  }
+
+  &:hover {
+    background: $green;
+    transition: background 0.3s;
+  }
+}
+
 .welcome {
   background: url('../img/bg/water.jpg') center center / cover no-repeat;
   color: #fff;
@@ -7,49 +23,54 @@
     align-self: center;
     flex-direction: column;
     justify-content: space-between;
-    width: 380px;
-    height: 395px;
-    min-height: 395px;
+    width: 38rem;
+    height: 39.5rem;
+    min-height: 39.5rem;
     text-align: center;
     background-color: rgba(18, 38, 32, 0.6);
-    margin-bottom: 30px;
+    margin-bottom: 4rem;
+
+    @include ipad {
+      width: 34.8rem;
+    }
+
+    @include iphone {
+      width: 31.2rem;
+    }
   }
 
   &__photo-title {
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin-top: 40px;
+    margin-top: 4rem;
   }
 
   .header-title__name {
-    font-weight: 500;
-    font-size: 28px;
+    font-size: 2.8rem;
     line-height: 1.241;
-  }
+    font-weight: 500;
 
-  .header-title__desc {
-      line-height: 1.5;
+    @include iphone {
+      font-size: 2.1rem;
+      line-height: 1.333;
+    }
   }
-
 
   .socials__icon {
     fill: #90a09a;
   }
 
-    &__footer {
+  &__footer {
+    font-size: 1.6rem;
     align-self: center;
     line-height: 6.285625;
-  }
-}
+    text-align: center;
 
-.btn_auth {
-  align-self: flex-end;
-  margin: 24px 70px 0 0;
-  border: 1px #fff solid;
-
-  &:hover {
-    background: $green;
-    transition: background 0.3s;
+    @media (max-width: 480px) {
+      font-size: 1.4rem;
+      line-height: 1.714;
+      margin-bottom: 10px;
+    }
   }
 }

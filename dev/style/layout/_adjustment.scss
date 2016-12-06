@@ -3,8 +3,36 @@ $green: #6c9c5a;
 $swampy-green: #566358;
 $dark-green: #373e42;
 
+@mixin desktop1800 {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin desktop1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
 }
 
 html, body {
@@ -15,11 +43,28 @@ html, body {
 }
 
 body {
-  background: #fff;
-  font: 16px/1.42 Roboto, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.42;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   color: $swampy-green;
   -webkit-font-smoothing: antialiased;
+
+  @include desktop1800 {
+    font-size: 1.6rem;
+  }
+
+  @include desktop1200 {
+    font-size: 1.6rem;
+  }
+
+  @include ipad {
+    font-size: 1.4rem;
+  }
+
+  @include iphone {
+    font-size: 1.4rem;
+  }
 }
 
 .wrapper {
@@ -30,8 +75,23 @@ body {
 }
 
 .container {
-  width: 1740px;
   margin: 0 auto;
+
+  @include desktop1800 {
+    width: 174rem;
+  }
+
+  @include desktop1200 {
+    width: 118rem;
+  }
+
+  @include ipad {
+    width: 72rem;
+  }
+
+  @include iphone {
+    width: 31.2rem;
+  }
 }
 
 ul {
