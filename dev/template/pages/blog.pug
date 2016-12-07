@@ -18,19 +18,24 @@ html
 
     body
         .wrapper
-            header.header
+            header.header.header_blog
                 .container
                     include ../parts/_header__top
                     .header__bottom_blog
                         .header__photo
-                        h1.section-title Блог
-                        .blog-desc статьи, которые я написал
+                        .section-title Блог
+                        .horizontal-line.horizontal-line_white
+                        .blog-desc Статьи, которые я написал
+                .bg__blog
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 110" preserveaspectratio="none" class="bg")
+                        polygon(class = "left" points="0,0 0,110 501,110 501,77")
+                        polygon(class = "right" points="1000,0 1000,110 500,110 500,77")
             section.blog
                 .container
                     include ../parts/_nav
                     main.blog__main
                         article.blog__article
-                            h2.article-title Что такое Sass и зачем он нужен
+                            .article-title Что такое Sass и зачем он нужен
                             .blog__date 22 ноября 2016 г.
                             .blog__record
                                 p Sass (Syntactically Awesome Stylesheets) — это скриптовый метаязык, который компилируется в обычные CSS-стили. В 2007-м появилась первая версия SASS, разработанная Гемптоном Кетлином. У языка есть два основных “начертания”: SASS и более новый SCSS. Отличия между ними небольшие, тем не менее нарушение правил синтаксиса не позволит скомпилировать файл. В SASS-синтаксисе нет фигурных скобок, вложенность элементов в нем реализована при помощи отступов, а стилевые правила обязательно отделены новыми строками. Независимо от синтаксиса, SCSS обратно совместим с CSS. То есть любой CSS обязательно будет валидным SCSS-кодом.

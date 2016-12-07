@@ -105,6 +105,7 @@
 
 .header {
   background: url("../img/bg/water.jpg") center center / cover no-repeat;
+  position: relative;
 
   .container {
     display: flex;
@@ -170,6 +171,33 @@
   fill: #fff;
 }
 
+.section-title {
+  font-size: 6.3rem;
+  line-height: 0.889;
+  font-family: SansusWebissimo;
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-size: 3.5rem;
+  line-height: 1.1714;
+  font-family: SansusWebissimo;
+}
+
+.horizontal-line {
+  width: 8.9rem;
+  height: 0.333rem;
+  margin: 2.5rem 0;
+
+  &_white {
+    background: #fff;
+  }
+
+  &_black {
+    background: #373e42;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -182,25 +210,29 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    padding: 3rem 0 5rem 0;
+    padding: 2.4rem 0 4.6rem 0;
   }
 
   &__left {
-    width: 35.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 56rem;
     line-height: 1.42;
     font-weight: 300;
   }
 
   &__center {
-    width: 48rem;
+    width: 58rem;
     display: flex;
     flex-direction: column;
+    margin-left: 2.2rem;
   }
 
   .footer-center {
 
     &__top {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     &__bottom {
@@ -255,10 +287,11 @@
   }
 
   &__right {
-    width: 52rem;
+    width: 56rem;
     color: rgba(255, 255, 255, 0.502);
     font-style: italic;
     line-height: 1.625;
+    margin-left: 4.5rem;
   }
 
   .footer-right__bottom {
@@ -269,8 +302,8 @@
     width: 100%;
     background-color: rgba(108, 156, 90, 0.851);
     text-align: center;
-    padding: 1.3rem 0;
-    line-height: 2.4rem;
+    padding: 0.6rem 0;
+    line-height: 1.5;
     font-weight: 300;
   }
 }
