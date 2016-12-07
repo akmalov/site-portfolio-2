@@ -1,11 +1,15 @@
 .header_blog {
 
-  .container {
-    margin-bottom: 11rem;
-  }
-
   .header__top {
-    margin-bottom: 1.9rem;
+    margin-bottom: 3rem;
+
+    @include ipad {
+      margin-bottom: 5.8rem;
+    }
+
+    @include iphone {
+      margin-bottom: 8rem;
+    }
   }
 }
 
@@ -17,33 +21,102 @@
 
   .header__photo {
     margin-bottom: 2.5rem;
-  }
-}
 
-.blog-desc {
-  font-size: 1.6rem;
-  line-height: 1.5;
+    @include ipad {
+       margin-bottom: 2rem;
+     }
+  }
+
+  .section-title {
+
+    @include ipad {
+      font-size: 4.9rem;
+      line-height: 1.0612;
+    }
+
+    @include iphone {
+      font-size: 3.5rem;
+      line-height: 1.2;
+    }
+  }
+
+  .blog-desc {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 11.5rem;
+
+    @include ipad {
+      font-size: 1.4rem;
+      line-height: 1.714;
+      margin-bottom: 6rem;
+    }
+
+    @include iphone {
+      margin-bottom: 12rem;
+    }
+  }
+
+  .down-scroll {
+    display: none;
+    z-index: 2;
+
+    @include ipad {
+      display: block;
+      margin-bottom: 9rem;
+    }
+
+    @include ipad {
+      margin-bottom: 7.5rem;
+    }
+  }
 }
 
 .bg__blog {
   position: absolute;
   fill: #faf8f0;
-  top: 28rem;
+  top: 27.5rem;
+  z-index: 1;
+
+  @media (max-width: 1500px) {
+    top: 31rem;
+  }
+
+  @include desktop1200 {
+    top: 32.6rem;
+  }
+
+  @media (max-width: 1000px) {
+    top: 35rem;
+  }
+
+  @include ipad {
+    top: 42.5rem;
+  }
+
+  @include iphone {
+    top: 53rem;
+  }
 }
 
 .blog {
+  z-index: 2;
   color: #455a64;
   background-color: #faf8f0;
-
-  .container {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 6.5rem;
-  }
+  display: flex;
+  justify-content: flex-start;
 
   .nav {
     width: 36rem;
-    margin-right: 12rem;
+    margin-right: 12.2rem;
+
+    @include desktop1200 {
+      width: 30rem;
+      margin-right: 10rem;
+    }
+
+    @include ipad {
+      display: none;
+    }
 
     &__list {
       text-align: right;
@@ -66,16 +139,51 @@
     }
   }
 
-  .blog__main {
-    width: 100rem;
+  &__main {
+    width: 88rem;
+    margin-right: 2rem;
+
+    @include desktop1200 {
+      width: 68rem;
+    }
+
+    @include ipad {
+      width: 72rem;
+      margin: 0 2.4rem;
+    }
+
+    @include iphone{
+      width: 31.2rem;
+      margin: 0 0.4rem;
+    }
   }
 
-  .blog__date {
+  .article-title {
+    margin-bottom: 1.5rem;
+
+    @include ipad {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__date {
     color: $green;
     line-height: 2.5625;
+
+    @include ipad {
+      font-size: 1.4rem;
+      line-height: 1.714;
+      margin-bottom: 0.5rem;
+    }
   }
 
-  .blog__record {
+  &__record {
     line-height: 1.625;
+    margin-bottom: 6.5rem;
+
+    @include ipad {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
   }
 }

@@ -1,20 +1,17 @@
 footer.footer
     .footer__top
-        .container
-            .footer__left
-                .footer-left__top Этот сайт я сделал в рамках обучения в Школе
-                .footer-left__bottom онлайн образования Loftschool.
-            .footer__center
-                .footer-center__top
-                    ul.links__list
-                        each href, title in links
-                            li.links__item
-                                a(href=`${href}`).links__link= title
-                .footer-center__bottom
-                    include ../components/_socials
-            .footer__right
-                .footer-right__top
-                |Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живёте.
-                .footer-right__bottom
-                |- Martin Golding
+        .footer__left Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool.
+        .footer__center
+            .footer-center__top
+                ul.links__list
+                    each href, title in links
+                        li.links__item
+                            a(href=`${href}`).links__link= title
+            .footer-center__bottom
+                include ../components/_socials
+        .footer__right
+            .footer-right__top
+            |Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живёте.
+            .footer-right__bottom
+            |- Martin Golding
     .footer__bottom © Сергей Акмалов | Создано с любовью в Loftschool | 2016
