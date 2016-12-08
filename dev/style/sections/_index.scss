@@ -9,7 +9,7 @@
   }
 
   &:hover {
-    background: $green;
+    background: $light-green;
     transition: background 0.3s;
   }
 }
@@ -37,6 +37,10 @@
     @include iphone {
       width: 31.2rem;
     }
+  }
+
+  .header__photo {
+    margin-bottom: 1.4rem;
   }
 
   &__photo-title {

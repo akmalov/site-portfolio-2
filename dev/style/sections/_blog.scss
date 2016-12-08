@@ -27,7 +27,8 @@
      }
   }
 
-  .section-title {
+  .section-title_blog {
+    color: #fff;
 
     @include ipad {
       font-size: 4.9rem;
@@ -71,7 +72,7 @@
   }
 }
 
-.bg__blog {
+.bg_blog {
   position: absolute;
   fill: #faf8f0;
   top: 27.5rem;
@@ -158,8 +159,9 @@
     }
   }
 
-  .article-title {
+  .article-title_blog {
     margin-bottom: 1.5rem;
+    text-transform: none;
 
     @include ipad {
       margin-bottom: 0.8rem;
