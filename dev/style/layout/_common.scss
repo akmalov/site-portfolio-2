@@ -180,6 +180,10 @@
     align-items: center;
     color: #fff;
     margin-bottom: 13rem;
+
+    .down-scroll {
+      z-index: 2;
+    }
   }
 }
 

@@ -17,32 +17,60 @@ html
         <![endif]-->
 
     body
-        .wrapper
+        .wrapper.wrapper_about
             header.header
                 include ../parts/_header__top
                 include ../parts/_header__bottom
+                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none" class="bg_about")
+                    polygon(class="left" points="0,0 0,300 501,300 501,84")
+                    polygon(class="right" points="1000,0 1000,300 500,300 500,84")
             section.about
                 .about__left
-                    .section-title Обо мне
+                    .about__title
+                        .section-title Обо мне
+                        .horizontal-line.horizontal-line_black
                     article.who
                         .who__photo
-                            .who__image
+                            img(src="img/content/my-photo.jpg").who__image
                         .article-title Кто я
+                        .horizontal-line.horizontal-line_black
                         .who__text
                             p Я веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём контент. А пока посмотрите, как всё тут классно и красиво
                 .about__right
                     .article-title Чем я могу быть вам полезен
-                    p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
-                    h3 Frontend
-                    h3 Backend
-                    h3 Workflow
+                    .horizontal-line.horizontal-line_black
+                    .about__text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+                    .about__tech Frontend
+                    .about__graphs
+                    .about__tech Backend
+                    .about__graphs
+                    .about__tech Workflow
+                    .about__graphs
             section.map
                 .contacts
-                    .article-title
+                    .article-title Контакты
+                    .horizontal-line.horizontal-line_black
                     ul.contacts__list
-                        each href, title in contacts
-                            li.contacts__item
-                                a(href=`${href}`).contacts__link= title
+                        li.contacts__item
+                            a(href="callto:skype").contacts__link
+                                svg(class="contacts__icon contacts__icon_skype")
+                                    use(xlink:href="img/sprite.svg#skype")
+                                |skype
+                        li.contacts__item
+                            a(href="mailto:gmail@gmail.com").contacts__link
+                                svg(class="contacts__icon contacts__icon_envelope2")
+                                    use(xlink:href="img/sprite.svg#envelope2")
+                                |gmail@gmail.com
+                        li.contacts__item
+                            a(href="tel:+79123456789").contacts__link
+                                svg(class="contacts__icon contacts__icon_phone2")
+                                    use(xlink:href="img/sprite.svg#phone2")
+                                |+7 912 345 67 89
+                        li.contacts__item
+                            svg(class="contacts__icon contacts__icon_map-marker")
+                                use(xlink:href="img/sprite.svg#map_marker")
+                            |Санкт-Петербург
                 include ../parts/_footer
         script(src='js/vendor.js')
+        script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
         script(src='js/main.js')
