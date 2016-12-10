@@ -57,52 +57,7 @@
   }
 }
 
-.tabs {
 
-  &__list {
-    background: #608e54;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__item {
-    background: #608e54;
-    border-right: 0.2rem solid #a0ba9e;
-
-    &:last-child {
-      border-right: none;
-    }
-
-    &:hover {
-      background: #4a803a;
-      transition: background 0.2s;
-
-      .tabs__list {
-        background: #4a803a;
-      }
-    }
-  }
-
-  &__link {
-    display: block;
-    width: 100%;
-    padding: 0.3rem 3rem;
-    font-size: 1.6rem;
-    line-height: 2.25;
-    font-weight: 500;
-    color: #fff;
-
-    @include ipad {
-      padding: 0.3rem 2.4rem 0.4rem 2.6rem;
-    }
-
-    @include iphone {
-      font-size: 1.4rem;
-      line-height: 2.25;
-      padding: 0.6rem 2.3rem 0.6rem 2.3rem;
-    }
-  }
-}
 
 .header {
   background: url("../img/bg/water.jpg") center center / cover no-repeat;
@@ -161,15 +116,18 @@
     line-height: 1.171;
     font-weight: 500;
     margin-bottom: 0.2rem;
+
+    @include iphone {
+      font-size: 2.1rem;
+      line-height: 1.333;
+    }
   }
 
   .header-title__desc {
-    font-size: 1.6rem;
     line-height: 1.5;
     margin-bottom: 13rem;
 
     @include iphone {
-      font-size: 1.4rem;
       line-height: 1.714;
     }
   }
@@ -209,6 +167,16 @@
   font-family: SansusWebissimo;
   color: $dark-green;
   text-transform: uppercase;
+
+  @include ipad {
+    font-size: 4.9rem;
+    line-height: 1.061;
+  }
+
+  @include iphone {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
 }
 
 .article-title {
@@ -248,6 +216,10 @@
   &_black {
     background: #373e42;
     margin: 2.5rem 0 2rem;
+
+    @include desktop1200 {
+      margin: 1.5rem 0 3rem;
+    }
   }
 }
 
@@ -262,6 +234,25 @@
   @include ipad {
     font-size: 1.4rem;
     line-height: 1.714;
+  }
+
+  &-line {
+    align-self: center;
+    height: 8.7rem;
+    width: 0.1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    @media (max-width: 1100px){
+      display: none;
+    }
+
+    @media (max-width: 500px) {
+      display: block;
+      width: calc(100%);
+      padding: 0 1rem;
+      height: 0.1rem;
+      margin-bottom: 1.5rem;
+    }
   }
 
   .footer__top {
@@ -280,7 +271,7 @@
       padding: 2.4rem 2rem 4.6rem;
     }
 
-    @include iphone {
+    @media (max-width: 500px) {
       flex-direction: column;
       text-align: center;
       padding: 1.5rem 1rem;
@@ -291,14 +282,16 @@
     width: 56rem;
     line-height: 1.42;
     font-weight: 300;
+    margin-right: 1rem;
 
     @include ipad {
       width: 50%;
+      margin-right: 0;
     }
 
-    @include iphone {
+    @media (max-width: 500px) {
       width: 100%;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -314,9 +307,9 @@
       margin-bottom: 4rem;
     }
 
-    @include iphone {
+    @media (max-width: 500px) {
       width: 100%;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -324,10 +317,18 @@
 
     &__top {
       margin-bottom: 2.5rem;
+
+      @media (max-width: 500px) {
+        margin-bottom: 1.5rem;
+      }
     }
 
     &__bottom {
       padding: 0 2rem;
+
+      @media (max-width: 500px) {
+        padding: 0;
+      }
     }
   }
 
@@ -351,7 +352,7 @@
       }
 
       @include iphone {
-        margin-left: 1%;
+        margin-left: 1.5%;
       }
 
       &:first-child {
@@ -382,7 +383,7 @@
       display: flex;
       justify-content: flex-start;
 
-      @include iphone {
+      @media (max-width: 500px) {
         justify-content: center;
       }
     }

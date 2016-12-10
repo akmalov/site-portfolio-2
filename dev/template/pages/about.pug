@@ -19,11 +19,22 @@ html
     body
         .wrapper.wrapper_about
             header.header
-                include ../parts/_header__top
-                include ../parts/_header__bottom
-                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none" class="bg_about")
-                    polygon(class="left" points="0,0 0,300 501,300 501,84")
-                    polygon(class="right" points="1000,0 1000,300 500,300 500,84")
+                .header__top.header__top_about
+                    .header__left
+                        include ../components/_socials
+                    .header__right
+                        .hamburger
+                .header__bottom.header__bottom_about
+                    .header__photo.header__photo_about
+                    .header__title
+                        .header-title__name Сергей Акмалов
+                        .header-title__desc.header-title__desc_about Личный сайт веб разработчика
+                    a.down-scroll(href='#')
+                        svg.down-scroll__img
+                            use(xlink:href="img/sprite.svg#arrow_down")
+                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" preserveAspectRatio="none" class="bg_about")
+                    polygon(class="left" points="0,0 0,320 501,320 501,84")
+                    polygon(class="right" points="1000,0 1000,320 500,320 500,84")
             section.about
                 .about__left
                     .about__title
@@ -35,21 +46,62 @@ html
                         .article-title Кто я
                         .horizontal-line.horizontal-line_black
                         .who__text
-                            p Я веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём контент. А пока посмотрите, как всё тут классно и красиво
+                            p Я веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём контент. А пока посмотрите, как всё тут классно и красиво.
                 .about__right
-                    .article-title Чем я могу быть вам полезен
-                    .horizontal-line.horizontal-line_black
+                    .article-title.article-title_about Чем я могу быть вам полезен
+                    .horizontal-line.horizontal-line_black.horizontal-line_about-right
                     .about__text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
                     .about__tech Frontend
                     .about__graphs
+                        .about__graph.about__html5
+                            svg(width="120" height="120" class="about-circles about-circles_html5")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#74a163" transform="rotate(-90 60 60)" class="about-skill_html5")
+                        .about__graph.about__css3
+                            svg(width="120" height="120" class="about-circles about-circles_css3")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#77a266" transform="rotate(-90 60 60)" class="about-skill_css3")
+                        .about__graph.about__js
+                            svg(width="120" height="120" class="about-circles about-circles_js")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#77a266" transform="rotate(-90 60 60)" class="about-skill_js")
                     .about__tech Backend
                     .about__graphs
+                        .about__graph.about__php
+                            svg(width="120" height="120" class="about-circles about-circles_php")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#b1c2a4" transform="rotate(-90 60 60)" class="about-skill_php")
+                        .about__graph.about__mysql
+                            svg(width="120" height="120" class="about-circles about-circles_mysql")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#a0b991" transform="rotate(-90 60 60)" class="about-skill_mysql")
+                        .about__graph.about__nodejs
+                            svg(width="120" height="120" class="about-circles about-circles_nodejs")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#b7c6aa" transform="rotate(-90 60 60)" class="about-skill_nodejs")
+                        .about__graph.about__mongodb
+                            svg(width="120" height="120" class="about-circles about-circles_mongodb")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#9ab68b" transform="rotate(-90 60 60)" class="about-skill_mongodb")
                     .about__tech Workflow
                     .about__graphs
+                        .about__graph.about__git
+                            svg(width="120" height="120" class="about-circles about-circles_git")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#77a266" transform="rotate(-90 60 60)" class="about-skill_git")
+                        .about__graph.about__gulp
+                            svg(width="120" height="120" class="about-circles about-circles_gulp")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#89ac79" transform="rotate(-90 60 60)" class="about-skill_gulp")
+                        .about__graph.about__bower
+                            svg(width="120" height="120" class="about-circles about-circles_bower")
+                                circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
+                                circle(r="50" cx="60" cy="60" stroke="#9ab68b" transform="rotate(-90 60 60)" class="about-skill_bower")
             section.map
                 .contacts
-                    .article-title Контакты
-                    .horizontal-line.horizontal-line_black
+                    .article-title.article-title_contacts Контакты
+                    .horizontal-line.horizontal-line_black.horizontal-line_contacts
                     ul.contacts__list
                         li.contacts__item
                             a(href="callto:skype").contacts__link

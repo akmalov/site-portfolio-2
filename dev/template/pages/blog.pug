@@ -19,13 +19,17 @@ html
     body
         .wrapper
             header.header.header_blog
-                include ../parts/_header__top
+                .header__top.header__top_blog
+                    .header__left
+                        include ../components/_socials
+                    .header__right
+                        .hamburger
                 .header__bottom_blog
-                    .header__photo
+                    .header__photo.header__photo_blog
                     .section-title.section-title_blog Блог
                     .horizontal-line.horizontal-line_white
-                    .blog-desc Статьи, которые я написал
-                    a.down-scroll(href='#')
+                    .header-title__desc.header-title__desc_blog Статьи, которые я написал
+                    a.down-scroll_blog(href='#')
                         svg.down-scroll__img
                             use(xlink:href="img/sprite.svg#arrow_down")
                 svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none" class="bg_blog")

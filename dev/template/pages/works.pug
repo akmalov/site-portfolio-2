@@ -19,8 +19,16 @@ html
     body
         .wrapper.wrapper
             header.header.header_works
-                include ../parts/_header__top
-                include ../parts/_header__bottom
+                .header__top
+                    .header__left
+                        include ../components/_socials
+                    .header__right
+                        .hamburger
+                .header__bottom
+                    include ../components/_header-photo-title
+                    a.down-scroll(href='#')
+                        svg.down-scroll__img
+                            use(xlink:href="img/sprite.svg#arrow_down")
                 svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none" class="bg_works")
                     polygon(class="left" points="0,0 0,300 501,300 501,84")
                     polygon(class="right" points="1000,0 1000,300 500,300 500,84")

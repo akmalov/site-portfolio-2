@@ -3,6 +3,14 @@
   margin: 2.4rem 7rem 3.5rem 0;
   border: 0.1rem #fff solid;
 
+  @include desktop1200 {
+    margin-right: 2rem;
+  }
+
+  @include ipad {
+    margin-top: 2rem;
+  }
+
   @media (max-width: 480px) {
     align-self: center;
     margin: 2.4rem 0 3.5rem;
@@ -35,11 +43,11 @@
     }
 
     @include iphone {
-      width: 31.2rem;
+      width: 30rem;
     }
   }
 
-  .header__photo {
+  .header__photo_welcome {
     margin-bottom: 1.4rem;
   }
 
@@ -50,31 +58,75 @@
     margin-top: 4rem;
   }
 
-  .header-title__name {
+  .header-title__name_welcome {
     font-size: 2.8rem;
-    line-height: 1.241;
-    font-weight: 500;
+    line-height: 3.4rem;
 
     @include iphone {
       font-size: 2.1rem;
-      line-height: 1.333;
+      line-height: 2.8rem;
     }
   }
 
-  .socials__icon {
+  .socials__icon_welcome {
     fill: #90a09a;
   }
 
   &__footer {
     font-size: 1.6rem;
     align-self: center;
-    line-height: 6.285625;
+    line-height: 10rem;
     text-align: center;
 
     @media (max-width: 480px) {
       font-size: 1.4rem;
-      line-height: 1.714;
+      line-height: 2.4rem;
       margin-bottom: 10px;
+    }
+  }
+}
+
+.tabs {
+
+  &__list {
+    background: #608e54;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    background: #608e54;
+    border-right: 0.2rem solid #a0ba9e;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background: #4a803a;
+      transition: background 0.2s;
+
+      .tabs__list {
+        background: #4a803a;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 0.3rem 3rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+    color: #fff;
+
+    @include ipad {
+      padding: 0.3rem 2.4rem 0.4rem 2.6rem;
+    }
+
+    @include iphone {
+      line-height: 2.4rem;
+      padding: 1rem 2rem;
     }
   }
 }
