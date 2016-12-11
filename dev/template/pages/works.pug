@@ -17,15 +17,18 @@ html
         <![endif]-->
 
     body
-        .wrapper.wrapper
+        .wrapper
             header.header.header_works
                 .header__top
                     .header__left
                         include ../components/_socials
                     .header__right
                         .hamburger
-                .header__bottom
-                    include ../components/_header-photo-title
+                .header__bottom.header__bottom_works
+                    .header__photo
+                    .header__title
+                        .header-title__name Сергей Акмалов
+                        .header-title__desc Личный сайт веб разработчика
                     a.down-scroll(href='#')
                         svg.down-scroll__img
                             use(xlink:href="img/sprite.svg#arrow_down")
@@ -33,8 +36,11 @@ html
                     polygon(class="left" points="0,0 0,300 501,300 501,84")
                     polygon(class="right" points="1000,0 1000,300 500,300 500,84")
             section.my-works
-                .section-title Мои работы
-                .horizontal-line.horizontal-line_black
+                .my-works__title
+                    .section-title Мои работы
+                    .horizontal-line.horizontal-line_black.horizontal-line_works-title
+                    svg(class="my-works__bg")
+                        use(xlink:href="img/sprite.svg#works_header")
                 .my-works__slider
                     .slider__left
                         .slider__desc
@@ -49,32 +55,35 @@ html
                             .slider__prev
                             .slider__next
             section.what-about
-                .section-title Что обо мне говорят
-                .horizontal-line.horizontal-line_black
-                .what-about__callbacks
+                .what-about__title
+                    .section-title.section-title_what-about Что обо мне говорят
+                    .horizontal-line.horizontal-line_black.horizontal-line_what-about
+                    svg(class="what-about__bg")
+                        use(xlink:href="img/sprite.svg#about_header")
+                .what-about__recalls
                     .what-about__left
                         .what-about__photo
-                            img.what-about__image(src='#',alt='Дима')
+                            img.what-about__image(src='img/content/Kovalchuk.png',alt='Дмитрий Ковальчук')
                         .what-about__comment
-                        |Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                            |Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
                         .what-about__sign
                             .sign__top
-                            |Ковальчук Дмитрий
+                                |Ковальчук Дмитрий
                             .sign__bottom
-                            |- основатель Loftschool
+                                |- основатель Loftschool
                     .what-about__right
                         .what-about__photo
-                            img.what-about__image(src='#',alt='Зар')
+                            img.what-about__image(src='img/content/Zacharov.png',alt='Зар Захаров')
                         .what-about__comment
-                        |Этот код выдержит любые испытания. Только пожалуй сайт не загружается в слишком старых браузерах!
+                            |Этот код выдержит любые испытания. Только пожалуй сайт не загружается в слишком старых браузерах!
                         .what-about__sign
                             .sign__top
-                            | Зар Захаров
+                                | Зар Захаров
                             .sign__bottom
-                            | - преподаватель
+                                | - преподаватель
                 .contact
                     .article-title Связаться со мной
-                    .horizontal-line.horizontal-line_black
+                    .horizontal-line.horizontal-line_black.horizontal-line_contacts
                     form.contact__form
                         input.form__name(name="" type="text" placeholder="Имя")
                         input.form__email(name="" type="text" placeholder="Email")
@@ -82,8 +91,8 @@ html
                         .contact__tabs
                             input.tabs__submit(name"" type="submit" value="Отправить")
                             input.tabs__submit(name"" type="reset" value="Очистить")
-                a.down-scroll(href='#')
-                    svg.down-scroll__img
+                a.down-scroll.up-scroll(href='#')
+                    svg.down-scroll__img.up-scroll__img
                         use(xlink:href="img/sprite.svg#arrow_down")
                 include ../parts/_footer
         script(src='js/vendor.js')

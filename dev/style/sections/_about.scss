@@ -75,14 +75,6 @@
     justify-content: flex-start;
   }
 
-  @media (max-width: 415px) {
-    //height: 205rem;
-  }
-
-  @include iphone {
-    //height: 195rem;
-  }
-
   &__title {
     display: flex;
     flex-direction: column;
@@ -127,7 +119,7 @@
       z-index: 2;
     }
 
-    .about-me {
+    .about__bg {
       position: absolute;
       z-index: 1;
       top: -5.5rem;
