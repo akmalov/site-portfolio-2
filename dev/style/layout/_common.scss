@@ -57,8 +57,6 @@
   }
 }
 
-
-
 .header {
   background: url("../img/bg/water.jpg") center center / cover no-repeat;
   position: relative;
@@ -104,11 +102,20 @@
     }
   }
 
-  &__title {
+  .header__title {
     align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 13rem;
+
+    @include ipad {
+      margin-bottom: 9.5rem;
+    }
+
+    @include iphone {
+      margin-bottom: 15rem;
+    }
   }
 
   .header-title__name {
@@ -119,16 +126,17 @@
 
     @include iphone {
       font-size: 2.1rem;
-      line-height: 1.333;
+      line-height: 2.8rem;
     }
   }
 
   .header-title__desc {
-    line-height: 1.5;
-    margin-bottom: 13rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
 
     @include iphone {
-      line-height: 1.714;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
     }
   }
 
@@ -137,7 +145,15 @@
     flex-direction: column;
     align-items: center;
     color: #fff;
-    margin-bottom: 13rem;
+    margin-bottom: 7.5rem;
+
+    @include ipad {
+      margin-bottom: 8.5rem;
+    }
+
+    @include iphone {
+      margin-bottom: 7rem;
+    }
 
     .down-scroll {
       z-index: 2;
@@ -170,7 +186,7 @@
 
   @include ipad {
     font-size: 4.9rem;
-    line-height: 1.061;
+    line-height: 5.2rem;
   }
 
   @include iphone {
@@ -192,13 +208,17 @@
 
   @include iphone {
     font-size: 2.1rem;
-    line-height: 1.333;
+    line-height: 2.8rem;
   }
 }
 
 .horizontal-line {
   width: 8.9rem;
-  height: 0.333rem;
+  height: 0.3rem;
+
+  @include iphone {
+    width: 5.6rem;
+  }
 
   &_white {
     background: #fff;
@@ -206,10 +226,6 @@
 
     @include ipad {
       margin: 1.2rem;
-    }
-
-    @include iphone {
-      width: 5.6rem;
     }
   }
 
@@ -219,6 +235,10 @@
 
     @include desktop1200 {
       margin: 1.5rem 0 3rem;
+    }
+
+    @include iphone {
+      margin: 1rem 0;
     }
   }
 }

@@ -40,11 +40,13 @@ html
                     .about__title
                         .section-title Обо мне
                         .horizontal-line.horizontal-line_black
+                        svg(class="about-me")
+                            use(xlink:href="img/sprite.svg#about_header")
                     article.who
                         .who__photo
                             img(src="img/content/my-photo.jpg").who__image
                         .article-title Кто я
-                        .horizontal-line.horizontal-line_black
+                        .horizontal-line.horizontal-line_black.horizontal-line_about-left
                         .who__text
                             p Я веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                             p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём контент. А пока посмотрите, как всё тут классно и красиво.
@@ -67,7 +69,7 @@ html
                                 circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
                                 circle(r="50" cx="60" cy="60" stroke="#77a266" transform="rotate(-90 60 60)" class="about-skill_js")
                     .about__tech Backend
-                    .about__graphs
+                    .about__graphs.about__graphs_four-graphs
                         .about__graph.about__php
                             svg(width="120" height="120" class="about-circles about-circles_php")
                                 circle(r="50" cx="60" cy="60" stroke="#dfdcd5" fill="none")
