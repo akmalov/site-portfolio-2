@@ -47,7 +47,10 @@ html
                             .article-title Сайт школы онлайн образования
                             .horizontal-line.horizontal-line_black
                             .slider__text HTML, CSS, Javascript
-                            a(href="#").btn.btn_works Посмотреть сайт
+                            a(href="#").btn.btn_works
+                                svg(class="btn__svg")
+                                    use(xlink:href="img/sprite.svg#link")
+                                |Посмотреть сайт
                     .slider__right
                         .slider__work
                             img(src="img/content/work-1.png").slider__image

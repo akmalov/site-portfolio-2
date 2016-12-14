@@ -7,6 +7,10 @@
   top: 44rem;
   z-index: 1;
   fill: #f8f9f5;
+
+  @media (max-width: 1400px) {
+    top: 49.5rem;
+  }
 }
 
 .my-works {
@@ -70,6 +74,10 @@
       width: 32rem;
       text-align: center;
 
+      .horizontal-line_black {
+        margin: 2.1rem 0 2.3rem;
+      }
+
       .slider__text {
         font-weight: 500;
         color: $green;
@@ -77,10 +85,21 @@
       }
 
       .btn_works {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         background: $light-green;
+        padding: 0.2rem 2rem;
 
         &:hover {
           background: $green;
+        }
+
+        .btn__svg {
+          width: 2rem;
+          height: 1.9rem;
+          fill: #fff;
+          margin-right: 1.2rem;
         }
       }
     }
