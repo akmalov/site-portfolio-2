@@ -49,6 +49,7 @@ body {
   font-weight: 400;
   color: $swampy-green;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @include desktop1800 {
     font-size: 1.6rem;
