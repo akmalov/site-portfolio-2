@@ -23,7 +23,10 @@ html
                     .header__left
                         include ../components/_socials
                     .header__right
-                        .hamburger
+                        .fullscreen-menu
+                            span.fullscreen-menu__top
+                            span.fullscreen-menu__middle
+                            span.fullscreen-menu__bottom
                 .header__bottom.header__bottom_about
                     .header__photo.header__photo_about
                     .header__title
@@ -125,6 +128,12 @@ html
                                 use(xlink:href="img/sprite.svg#map_marker")
                             |Санкт-Петербург
                 include ../parts/_footer
+            .overlay
+                nav.overlay__menu
+                    ul.overlay__list
+                        each href, title in links
+                            li.overlay__item
+                                a(href=`${href}`).overlay__link= title
         script(src='js/vendor.js')
         script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
         script(src='js/main.js')

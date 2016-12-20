@@ -23,7 +23,10 @@ html
                     .header__left
                         include ../components/_socials
                     .header__right
-                        .hamburger
+                        .fullscreen-menu
+                            span.fullscreen-menu__top
+                            span.fullscreen-menu__middle
+                            span.fullscreen-menu__bottom
                 .header__bottom.header__bottom_works
                     .header__photo
                     .header__title
@@ -35,28 +38,58 @@ html
                 svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none" class="bg_works")
                     polygon(class="left" points="0,0 0,300 501,300 501,84")
                     polygon(class="right" points="1000,0 1000,300 500,300 500,84")
-            section.my-works
-                .my-works__title
+            section.works
+                .works__title
                     .section-title Мои работы
                     .horizontal-line.horizontal-line_black.horizontal-line_works-title
-                    svg(class="my-works__bg")
+                    svg(class="works__bg")
                         use(xlink:href="img/sprite.svg#works_header")
-                .my-works__slider
-                    .slider__left
-                        .slider__desc
-                            .article-title Сайт школы онлайн образования
-                            .horizontal-line.horizontal-line_black
-                            .slider__text HTML, CSS, Javascript
-                            a(href="#").btn.btn_works
-                                svg(class="btn__svg")
-                                    use(xlink:href="img/sprite.svg#link")
-                                |Посмотреть сайт
-                    .slider__right
-                        .slider__work
-                            img(src="img/content/work-1.png").slider__image
-                        .slider__controls
-                            .slider__prev
-                            .slider__next
+                .works__slider
+                    .works-slider__wrapper
+                        ul.works-slider__list
+                            li.works-slider__item.works-slider__item_active
+                                .works-slider__left
+                                    img(src="img/content/work-1.png").works-slider__picture
+                                .works-slider__right
+                                    .article-title Сайт школы онлайн образования
+                                    .horizontal-line.horizontal-line_black
+                                    .works-slider__skills HTML, CSS, JavaScript
+                                    .btn
+                                        a(href="#").works-slider__link Посмотреть сайт
+                            li.works-slider__item
+                                .works-slider__left
+                                    img(src="img/content/work-2.png").works-slider__picture
+                                .works-slider__right
+                                    .article-title Агентство интернет решений "ITLoft"
+                                    .horizontal-line.horizontal-line_black
+                                    .works-slider__skills Node.js
+                                    .btn
+                                        a(href="#").works-slider__link Посмотреть сайт
+                            li.works-slider__item
+                                .works-slider__left
+                                    img(src="img/content/work-3.png").works-slider__picture
+                                .works-slider__right
+                                    .article-title Портал обучающих уроков "Loftblog"
+                                    .horizontal-line.horizontal-line_black
+                                    .works-slider__skills Ruby on Rails, JavaScript, Restful
+                                    .btn
+                                        a(href="#").works-slider__link Посмотреть сайт
+                            li.works-slider__item
+                                .works-slider__left
+                                    img(src="img/content/work-4.png").works-slider__picture
+                                .works-slider__right
+                                    .article-title Сайт "Атма йога"
+                                    .horizontal-line.horizontal-line_black
+                                    .works-slider__skills UX, Design, SEO
+                                    .btn
+                                        a(href="#").works-slider__link Посмотреть сайт
+                    .works-slider__controls
+                        a(href='#').works-slider__controls-button.works-slider__controls-button_next
+                            svg.right-scroll__img
+                                use(xlink:href="img/sprite.svg#arrow_down")
+                        a(href='#').works-slider__controls-button.works-slider__controls-button_prev
+                            svg.left-scroll__img
+                                use(xlink:href="img/sprite.svg#arrow_down")
             section.what-about
                 .what-about__title
                     .section-title.section-title_what-about Что обо мне говорят
@@ -88,15 +121,21 @@ html
                     .article-title Связаться со мной
                     .horizontal-line.horizontal-line_black.horizontal-line_contacts
                     form.contact__form
-                        input.form__name(name="" type="text" placeholder="Имя")
-                        input.form__email(name="" type="text" placeholder="Email")
-                        textarea.form__textarea(placeholder="Ваше сообщение")
-                        .contact__tabs
+                        input.contact-form__name(name="" type="text" placeholder="Имя")
+                        input.contact-form__email(name="" type="text" placeholder="Email")
+                        textarea.contact-form__textarea(placeholder="Ваше сообщение")
+                        .contact-form__tabs
                             input.tabs__submit(name"" type="submit" value="Отправить")
                             input.tabs__submit(name"" type="reset" value="Очистить")
                 a.down-scroll.up-scroll(href='#')
                     svg.down-scroll__img.up-scroll__img
                         use(xlink:href="img/sprite.svg#arrow_down")
                 include ../parts/_footer
+            .overlay
+                nav.overlay__menu
+                    ul.overlay__list
+                        each href, title in links
+                            li.overlay__item
+                                a(href=`${href}`).overlay__link= title
         script(src='js/vendor.js')
         script(src='js/main.js')

@@ -17,28 +17,31 @@ html
         <![endif]-->
 
     body
-        .welcome-background
-            canvas.welcome-canvas
+        .water-background
+            canvas.water-canvas
         .wrapper.welcome
-            a(href="#").btn.btn_auth Авторизоваться
+            .btn.btn_auth Авторизоваться
             .welcome__container
-                .welcome__photo-title
-                    .header__photo.header__photo_welcome
-                    .header__title
-                        .header-title__name.header-title__name_welcome Сергей Акмалов
-                        .header-title__desc Личный сайт веб разработчика
-                .welcome__socials
-                    ul.socials__list
-                        each href, title in icons
-                            li.socials__item
-                                a(href=`${href}`).socials__link
-                                    svg(class="socials__icon socials__icon_welcome socials__icon_" + title)
-                                        use(xlink:href="img/sprite.svg#" + title)
-                .welcome__tabs
-                    ul.tabs__list
-                        each href, title in tabs
-                            li.tabs__item
-                                a(href=`${href}`).tabs__link= title
+                .welcome__front
+                    .welcome__photo-title
+                        .header__photo.header__photo_welcome
+                        .header__title
+                            .header-title__name.header-title__name_welcome Сергей Акмалов
+                            .header-title__desc Личный сайт веб разработчика
+                    .welcome__socials
+                        ul.socials__list
+                            each href, title in icons
+                                li.socials__item
+                                    a(href=`${href}`).socials__link
+                                        svg(class="socials__icon socials__icon_welcome socials__icon_" + title)
+                                            use(xlink:href="img/sprite.svg#" + title)
+                    .welcome__tabs
+                        ul.tabs__list
+                            each href, title in tabs
+                                li.tabs__item
+                                    a(href=`${href}`).tabs__link= title
+                .welcome__back
+                    include ../parts/_auth
             .welcome__footer Сергей Акмалов | создано с любовью в Loftschool | 2016
         script(src='js/vendor.js')
         script(src='js/main.js')

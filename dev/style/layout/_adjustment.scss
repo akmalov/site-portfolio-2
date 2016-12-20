@@ -124,3 +124,9 @@ p {
 a {
   text-decoration: none;
 }
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}

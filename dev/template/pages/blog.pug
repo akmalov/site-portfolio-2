@@ -23,7 +23,10 @@ html
                     .header__left
                         include ../components/_socials
                     .header__right
-                        .hamburger
+                        .fullscreen-menu
+                            span.fullscreen-menu__top
+                            span.fullscreen-menu__middle
+                            span.fullscreen-menu__bottom
                 .header__bottom_blog
                     .header__photo.header__photo_blog
                     .section-title.section-title_blog Блог
@@ -47,5 +50,11 @@ html
                             p Sass позволяет вкладывать правила CSS друг в друга. Вложенные правила применяются только для элементов, соответствующих внешним селекторам. Это помогает избежать повторения родительских селекторов, и делает сложные CSS макеты с большим количеством вложенных селекторов гораздо проще.
 
             include ../parts/_footer
+            .overlay
+                nav.overlay__menu
+                    ul.overlay__list
+                        each href, title in links
+                            li.overlay__item
+                                a(href=`${href}`).overlay__link= title
             script(src='js/vendor.js')
             script(src='js/main.js')

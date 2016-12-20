@@ -1,3 +1,349 @@
+.water-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
+  }
+}
+
+.wrapper-auth {
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+
+  .auth {
+    margin: 22rem 0 1rem;
+    z-index: 2;
+    background-color: rgba(18, 38, 32, 0.6);
+
+    @media (max-width: 1400px){
+      margin-top: 18rem;
+    }
+
+    @include desktop1200 {
+      margin-top: 12rem;
+    }
+
+    @include ipad {
+      margin-top: 27.5rem;
+    }
+
+    @media (max-width: 768px) and (max-height: 890px) {
+      margin-top: 20rem;
+    }
+
+    @media (max-width: 768px) and (max-height: 820px) {
+      margin-top: 15rem;
+    }
+
+    @media (max-width: 768px) and (max-height: 700px) {
+      margin-top: 10rem;
+    }
+
+    @include iphone {
+      margin-top: 6rem;
+    }
+
+    &__footer {
+      font-size: 1.6rem;
+      align-self: center;
+      line-height: 10rem;
+      text-align: center;
+      z-index: 2;
+
+      @media (max-width: 480px) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 38rem;
+  height: 42.5rem;
+  padding: 3.2rem 0 0;
+
+  @include ipad {
+    width: 34.8rem;
+    height: 42.6rem;
+  }
+
+  @include iphone{
+    width: 30rem;
+    height: 42.4rem;
+  }
+
+  .article-title_auth {
+    font-size: 3.5rem;
+    line-height: 4.1rem;
+
+    @include iphone {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+  }
+
+  .horizontal-line__auth {
+    margin: 2rem 0 3rem;
+
+    @include iphone {
+      width: 8.9rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .form {
+
+    &__login-wrapper, &__password-wrapper {
+      display: flex;
+      position: relative;
+      width: 34rem;
+      height: 4.5rem;
+      margin-bottom: 2rem;
+      line-height: 10rem;
+      color: $dark-green;
+
+      @include ipad {
+        width: 30.5rem;
+      }
+
+      @include iphone {
+        width: 27.2rem;
+      }
+    }
+
+    &__login, &__password {
+      width: 100%;
+      height: 100%;
+      padding-left: 6.2rem;
+      border-radius: 2.5rem;
+      line-height: 10rem;
+      color: $dark-green;
+
+      &:focus {
+        border-radius: 2.5rem;
+      }
+    }
+
+    &__checkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      @include iphone {
+        padding-left: 4rem;
+      }
+    }
+
+    &__human-title {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+
+      @include desktop1200 {
+        font-weight: 500;
+      }
+
+      @include iphone {
+        padding-left: 4rem;
+      }
+    }
+
+    &__radio {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &-buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+
+        @include ipad {
+          margin-bottom: 3.5rem;
+        }
+      }
+
+      &_left {
+        margin-right: 4rem;
+
+        @include iphone {
+          padding-left: 4rem;
+        }
+      }
+    }
+
+    &-checkbox {
+
+      &__input {
+        display: none;
+
+        &:checked + .form-checkbox__custom::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 25%;
+          left: 25%;
+          width: 1.1rem;
+          height: 0.9rem;
+          background: url("../img/icons/check.svg") 50% no-repeat transparent;
+          background-size: contain;
+        }
+      }
+
+      &__custom {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.2rem;
+        background: $light-green;
+        margin-right: 1rem;
+      }
+
+      &__title {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    &-radio {
+
+      &__input {
+        display: none;
+
+        &:checked + .form-radio__custom::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 25%;
+          left: 25%;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: $green;
+        }
+
+        &:checked ~ .form-radio__title {
+          font-weight: 500;
+          color: $green;
+
+          @include desktop1200 {
+            font-weight: 400;
+          }
+        }
+      }
+
+      &__custom {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: #fff;
+        margin-right: 1rem;
+      }
+
+      &__title {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    &__tabs {
+      width: 38rem;
+
+      @include ipad {
+        width: 34.8rem;
+      }
+
+      @include iphone {
+        width: 30rem;
+      }
+    }
+  }
+
+  .tabs__list_auth {
+    background: $light-green;
+  }
+
+  .tabs__item_auth {
+    width: 50%;
+    background: $light-green;
+
+    &:hover {
+      background: $green;
+    }
+  }
+
+  .tabs__link_auth {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    background: $light-green;
+    padding: 0.2rem 5rem;
+
+    @include ipad {
+      padding: 0.2rem 3rem;
+    }
+
+    @include iphone {
+      padding: 0.9rem 3rem;
+    }
+
+    &:hover {
+      background: $green;
+    }
+  }
+
+  .login__sign, .password__sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    top: 0.2rem;
+    left: 0;
+    width: 4.5rem;
+    height: 4.3rem;
+    background: #f0efe9;
+  }
+
+  .login-sign__image, .password-sign__image {
+    fill: #c4cbcd;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 .btn {
   min-height: 4.5rem;
   font-size: 1.6rem;
@@ -5,7 +351,7 @@
   font-weight: 500;
   color: #fff;
   border-radius: 4rem;
-  padding: 0.2rem 2.8rem;
+  padding: 0.3rem 2.8rem;
   overflow: hidden;
 
   @include iphone {
@@ -54,6 +400,169 @@
         fill: $green;
       }
     }
+  }
+}
+
+.tabs {
+
+  &__list {
+    background: #608e54;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    background: #608e54;
+    border-right: 0.2rem solid #a0ba9e;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background: #4a803a;
+
+      .tabs__list {
+        background: #4a803a;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 0.3rem 3rem;
+
+    @include ipad {
+      padding: 0.3rem 2.4rem 0.4rem 2.6rem;
+    }
+
+    @include iphone {
+      line-height: 2.4rem;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.fullscreen-menu {
+  position: relative;
+  z-index: 5;
+  width: 4rem;
+  height: 3.4rem;
+  cursor: pointer;
+
+  &:hover {
+
+    .fullscreen-menu__top, .fullscreen-menu__middle, .fullscreen-menu__bottom {
+      background: $green;
+    }
+  }
+
+  &_active {
+
+    .fullscreen-menu__top {
+      transform: translateY(15px) translateX(0) rotate(45deg);
+    }
+    .fullscreen-menu__middle {
+      opacity: 0;
+    }
+
+    .fullscreen-menu__bottom {
+      transform: translateY(-15px) translateX(0) rotate(-45deg);
+    }
+  }
+
+  &__top, &__middle, &__bottom {
+    top: 0;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    height: 0.5rem;
+    width: 4rem;
+    transition: all .35s ease;
+    border-radius: 0.2rem;
+
+    &:nth-of-type(2) {
+      top: 15px;
+    }
+
+    &:nth-of-type(3) {
+      top: 30px;
+    }
+  }
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  background: $green;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 4;
+
+  &_open {
+    opacity: .8;
+    visibility: visible;
+    height: 100%;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35rem;
+    margin-top: 26rem;
+    font-size: 6.3rem;
+    font-family: SansusWebissimo;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__list {
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+    opacity: 1;
+    height: 6.3rem;
+    margin-bottom: 8rem;
+
+    &:after {
+      position: absolute;
+      visibility: hidden;
+      content: '';
+      top: 10rem;
+      left: 38%;
+      width: 8.9rem;
+      height: 0.3rem;
+      background: #fff;
+    }
+
+    &:hover:after {
+      visibility: visible;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
   }
 }
 
