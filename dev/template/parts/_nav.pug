@@ -1,5 +1,6 @@
 nav.nav
     ul.nav__list
-        each href, title in nav
-            li(class="nav__item nav__item_" + ( (title == "Что такое Sass и зачем он нужен") ? 'active' : ''))
-                a(href=`${href}`).nav__link= title
+        li.nav__item
+            a(href="#one").nav__link Что такое Sass и зачем он нужен
+        li.nav__item
+            a(href="#two").nav__link Почему я выбрал Pug

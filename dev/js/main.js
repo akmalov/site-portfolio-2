@@ -13,11 +13,6 @@ $(".tabs__item_index").on("click", function() {
     $(".btn_auth").removeClass("btn_auth_hide");
 });
 
-$(".form-radio__input:checked").on("click", function() {
-    $(".welcome__container").removeClass("welcome__container_flip");
-    $(".btn_auth").removeClass("btn_auth_hide");
-});
-
 var slider = (function() {
 
     return {
@@ -85,4 +80,3 @@ $(document).ready(function(){
        slider.init();
    }
 });
-
