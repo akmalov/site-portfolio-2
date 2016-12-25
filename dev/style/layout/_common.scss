@@ -4,7 +4,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
@@ -26,9 +25,11 @@
   color: #fff;
 
   .auth {
-    margin: 22rem 0 1rem;
+    margin: 22rem 0 0;
     z-index: 2;
     background-color: rgba(18, 38, 32, 0.6);
+    border-radius: 0.5rem;
+    overflow: hidden;
 
     @media (max-width: 1400px){
       margin-top: 18rem;
@@ -186,7 +187,7 @@
       &-buttons {
         display: flex;
         justify-content: center;
-        margin-bottom: 4rem;
+        margin-bottom: 3.5rem;
 
         @include ipad {
           margin-bottom: 3.5rem;
@@ -290,17 +291,8 @@
     }
   }
 
-  .tabs__list_auth {
-    background: $light-green;
-  }
-
   .tabs__item_auth {
     width: 50%;
-    background: $light-green;
-
-    &:hover {
-      background: $green;
-    }
   }
 
   .tabs__link_auth {
@@ -308,7 +300,7 @@
     cursor: pointer;
     text-align: center;
     background: $light-green;
-    padding: 0.2rem 5rem;
+    padding: 0.3rem 5rem;
 
     @include ipad {
       padding: 0.2rem 3rem;
@@ -320,6 +312,21 @@
 
     &:hover {
       background: $green;
+    }
+  }
+
+  .tabs__item_index {
+
+    .tabs__link {
+      padding: 0.5rem 5rem;
+
+      @include ipad {
+        padding: 0.4rem 3rem;
+      }
+
+      @include iphone {
+        padding: 0.9rem 3rem;
+      }
     }
   }
 
@@ -345,6 +352,7 @@
 }
 
 .btn {
+  display: block;
   min-height: 4.5rem;
   font-size: 1.6rem;
   line-height: 2.258;
@@ -354,7 +362,7 @@
   padding: 0.3rem 2.8rem;
   overflow: hidden;
 
-  @include iphone {
+  @media (max-width: 480px) {
     min-height: 4rem;
     font-size: 1.4rem;
     line-height: 1.714;
@@ -406,25 +414,16 @@
 .tabs {
 
   &__list {
-    background: #608e54;
     display: flex;
     justify-content: space-between;
+    border-radius: 0.5rem;
   }
 
   &__item {
-    background: #608e54;
     border-right: 0.2rem solid #a0ba9e;
 
     &:last-child {
       border-right: none;
-    }
-
-    &:hover {
-      background: #4a803a;
-
-      .tabs__list {
-        background: #4a803a;
-      }
     }
   }
 
@@ -435,7 +434,7 @@
     line-height: 3.6rem;
     font-weight: 500;
     color: #fff;
-    padding: 0.3rem 3rem;
+    padding: 0.3rem 3rem 0.3rem 3.1rem;
 
     @include ipad {
       padding: 0.3rem 2.4rem 0.4rem 2.6rem;
@@ -455,6 +454,11 @@
   height: 3.4rem;
   cursor: pointer;
 
+  @media (max-width: 480px) {
+    width: 2.6rem;
+    height: 2.3rem;
+  }
+
   &:hover {
 
     .fullscreen-menu__top, .fullscreen-menu__middle, .fullscreen-menu__bottom {
@@ -463,16 +467,30 @@
   }
 
   &_active {
+    position: fixed;
+    right: 3rem;
+
+    @include iphone {
+      right: 1rem
+    }
 
     .fullscreen-menu__top {
-      transform: translateY(15px) translateX(0) rotate(45deg);
+      transform: translateY(1.5rem) translateX(0) rotate(45deg);
+
+      @media (max-width: 480px) {
+        transform: translateY(1rem) translateX(0) rotate(45deg);
+      }
     }
     .fullscreen-menu__middle {
       opacity: 0;
     }
 
     .fullscreen-menu__bottom {
-      transform: translateY(-15px) translateX(0) rotate(-45deg);
+      transform: translateY(-1.5rem) translateX(0) rotate(-45deg);
+
+      @media (max-width: 480px) {
+        transform: translateY(-1rem) translateX(0) rotate(-45deg);
+      }
     }
   }
 
@@ -488,12 +506,25 @@
     transition: all .35s ease;
     border-radius: 0.2rem;
 
+    @media (max-width: 480px) {
+      width: 2.6rem;
+      height: 0.3rem;
+    }
+
     &:nth-of-type(2) {
-      top: 15px;
+      top: 1.5rem;
+
+      @media (max-width: 480px) {
+        top: 1rem;
+      }
     }
 
     &:nth-of-type(3) {
-      top: 30px;
+      top: 3rem;
+
+      @media (max-width: 480px) {
+        top: 2rem;
+      }
     }
   }
 }
@@ -531,6 +562,34 @@
     font-family: SansusWebissimo;
     text-transform: uppercase;
     text-align: center;
+
+    @media (max-height: 900px) {
+      margin-top: 18rem;
+    }
+
+    @media (max-height: 800px) {
+      margin-top: 15rem;
+    }
+
+    @media (max-height: 700px) {
+      margin-top: 10rem;
+    }
+
+    @media (max-height: 625px) {
+      margin-top: 5rem;
+    }
+
+    @media (max-height: 575px) {
+      margin-top: 0;
+    }
+
+    @include ipad {
+      font-size: 4.9rem;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 3.5rem;
+    }
   }
 
   &__list {
@@ -543,15 +602,30 @@
     height: 6.3rem;
     margin-bottom: 8rem;
 
+    @media (max-width: 400px) {
+      margin-bottom: 4rem;
+    }
+
     &:after {
       position: absolute;
       visibility: hidden;
       content: '';
-      top: 10rem;
+      top: 8rem;
       left: 38%;
       width: 8.9rem;
       height: 0.3rem;
       background: #fff;
+
+      @include ipad {
+        left: 34%;
+        top: 7rem;
+      }
+
+      @media (max-width: 400px) {
+        top: 5rem;
+        left: 36%;
+        width: 5.6rem;
+      }
     }
 
     &:hover:after {
@@ -588,7 +662,7 @@
 
     &_vk {
 
-      @include iphone {
+      @media (max-width: 480px) {
         width: 2.4rem;
         height: 1.3rem;
       }
@@ -596,7 +670,7 @@
 
     &_github {
 
-      @include iphone {
+      @media (max-width: 480px) {
         width: 2.1rem;
         height: 1.7rem;
       }
@@ -604,7 +678,7 @@
 
     &_in {
 
-      @include iphone {
+      @media (max-width: 480px) {
         width: 1.9rem;
         height: 1.7rem;
       }
@@ -698,7 +772,7 @@
     line-height: 5.2rem;
   }
 
-  @include iphone {
+  @media (max-width: 480px) {
     font-size: 3.5rem;
     line-height: 1.2;
   }
@@ -712,10 +786,10 @@
 
   @include ipad {
     font-size: 3rem;
-    line-height: 1.2;
+    line-height: 3.6rem;
   }
 
-  @include iphone {
+  @media (max-width: 480px) {
     font-size: 2.1rem;
     line-height: 2.8rem;
   }

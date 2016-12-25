@@ -35,61 +35,79 @@ html
                     a.down-scroll(href='#')
                         svg.down-scroll__img
                             use(xlink:href="img/sprite.svg#arrow_down")
-                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none" class="bg_works")
-                    polygon(class="left" points="0,0 0,300 501,300 501,84")
-                    polygon(class="right" points="1000,0 1000,300 500,300 500,84")
+                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" preserveAspectRatio="none" class="bg_works")
+                    polygon(class="left" points="0,0 0,400 501,400 501,84")
+                    polygon(class="right" points="1000,0 1000,400 500,400 500,84")
             section.works
                 .works__title
                     .section-title Мои работы
                     .horizontal-line.horizontal-line_black.horizontal-line_works-title
                     svg(class="works__bg")
                         use(xlink:href="img/sprite.svg#works_header")
-                .works__slider
-                    .works-slider__wrapper
-                        ul.works-slider__list
-                            li.works-slider__item.works-slider__item_active
-                                .works-slider__left
-                                    img(src="img/content/work-1.png").works-slider__picture
-                                .works-slider__right
-                                    .article-title Сайт школы онлайн образования
-                                    .horizontal-line.horizontal-line_black
-                                    .works-slider__skills HTML, CSS, JavaScript
-                                    .btn
-                                        a(href="#").works-slider__link Посмотреть сайт
-                            li.works-slider__item
-                                .works-slider__left
-                                    img(src="img/content/work-2.png").works-slider__picture
-                                .works-slider__right
-                                    .article-title Агентство интернет решений "ITLoft"
-                                    .horizontal-line.horizontal-line_black
-                                    .works-slider__skills Node.js
-                                    .btn
-                                        a(href="#").works-slider__link Посмотреть сайт
-                            li.works-slider__item
-                                .works-slider__left
-                                    img(src="img/content/work-3.png").works-slider__picture
-                                .works-slider__right
-                                    .article-title Портал обучающих уроков "Loftblog"
-                                    .horizontal-line.horizontal-line_black
-                                    .works-slider__skills Ruby on Rails, JavaScript, Restful
-                                    .btn
-                                        a(href="#").works-slider__link Посмотреть сайт
-                            li.works-slider__item
-                                .works-slider__left
-                                    img(src="img/content/work-4.png").works-slider__picture
-                                .works-slider__right
-                                    .article-title Сайт "Атма йога"
-                                    .horizontal-line.horizontal-line_black
-                                    .works-slider__skills UX, Design, SEO
-                                    .btn
-                                        a(href="#").works-slider__link Посмотреть сайт
-                    .works-slider__controls
-                        a(href='#').works-slider__controls-button.works-slider__controls-button_next
-                            svg.right-scroll__img
-                                use(xlink:href="img/sprite.svg#arrow_down")
-                        a(href='#').works-slider__controls-button.works-slider__controls-button_prev
-                            svg.left-scroll__img
-                                use(xlink:href="img/sprite.svg#arrow_down")
+                .slider
+                    .slider__container
+                        .slider__current
+                            ul.slider-current__list
+                                li.slider-current__item
+                                    img(src="img/content/work-1.png").slider-current__image
+                                li.slider-current__item.slider-current__item_active
+                                    img(src="img/content/work-2.png").slider-current__image
+                                li.slider-current__item
+                                    img(src="img/content/work-3.png").slider-current__image
+                                li.slider-current__item
+                                    img(src="img/content/work-4.png").slider-current__image
+                        .slider__desc
+                            .slider-desc__container
+                                ul.slider-desc__list
+                                    li.slider-desc__item
+                                        .slider-desc__title.article-title Агентство интернет решений "ITLoft"
+                                        .horizontal-line.horizontal-line_black
+                                        .slider-desc__skills Node.js
+                                        a(href="#").btn.slider-desc__btn Посмотреть сайт
+                                            svg(class="slider-desc__btn-sign")
+                                                use(xlink:href="img/sprite.svg#link")
+                                    li.slider-desc__item.slider-desc__item_active
+                                        .slider-desc__title.article-title Школа онлайн-образования "LoftSchool"
+                                        .horizontal-line.horizontal-line_black
+                                        .slider-desc__skills HTML5, CSS3, JavaScript, PHP
+                                        a(href="#").btn.slider-desc__btn Посмотреть сайт
+                                            svg(class="slider-desc__btn-sign")
+                                                use(xlink:href="img/sprite.svg#link")
+                                    li.slider-desc__item
+                                        .slider-desc__title.article-title Портал обучающих уроков "LoftBlog"
+                                        .horizontal-line.horizontal-line_black
+                                        .slider-desc__skills Ruby on Rails, JavaScript, RESTful
+                                        a(href="#").btn.slider-desc__btn Посмотреть сайт
+                                            svg(class="slider-desc__btn-sign")
+                                                use(xlink:href="img/sprite.svg#link")
+                                    li.slider-desc__item
+                                        .slider-desc__title.article-title Сайт "Атма йога"
+                                        .horizontal-line.horizontal-line_black
+                                        .slider-desc__skills UX, design, SEO
+                                        a(href="#").btn.slider-desc__btn Посмотреть сайт
+                                            svg(class="slider-desc__btn-sign")
+                                                use(xlink:href="img/sprite.svg#link")
+                        .slider__thumbnails
+                            .slider__thumbnail.slider__thumbnail_down
+                                ul.slider-thumbnail__list
+                                    li.slider-thumbnail__item.slider-thumbnail__item_active
+                                        img(src="img/content/work-1.png").slider-thumbnail__image
+                                    li.slider-thumbnail__item
+                                        img(src="img/content/work-2.png").slider-thumbnail__image
+                                    li.slider-thumbnail__item
+                                        img(src="img/content/work-3.png").slider-thumbnail__image
+                                    li.slider-thumbnail__item
+                                        img(src="img/content/work-4.png").slider-thumbnail__image
+                            .slider__thumbnail.slider__thumbnail_up
+                                ul.slider-thumbnail__list
+                                    li.slider-thumbnail__item
+                                        img(src="img/content/work-1.png").slider-thumbnail__image
+                                    li.slider-thumbnail__item
+                                        img(src="img/content/work-2.png").slider-thumbnail__image
+                                    li.slider-thumbnail__item.slider-thumbnail__item_active
+                                        img(src="img/content/work-3.png").slider-thumbnail__image
+                                    li.slider-thumbnail__item
+                                        img(src="img/content/work-4.png").slider-thumbnail__image
             section.what-about
                 .what-about__title
                     .section-title.section-title_what-about Что обо мне говорят
@@ -118,7 +136,7 @@ html
                             .sign__bottom
                                 | - преподаватель
                 .contact
-                    .article-title Связаться со мной
+                    .article-title.article-title_contact Связаться со мной
                     .horizontal-line.horizontal-line_black.horizontal-line_contacts
                     form.contact__form
                         input.contact-form__name(name="" type="text" placeholder="Имя")

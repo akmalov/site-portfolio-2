@@ -36,12 +36,45 @@ html
                                         svg(class="socials__icon socials__icon_welcome socials__icon_" + title)
                                             use(xlink:href="img/sprite.svg#" + title)
                     .welcome__tabs
-                        ul.tabs__list
+                        ul.tabs__list.tabs__list_welcome
                             each href, title in tabs
-                                li.tabs__item
+                                li.tabs__item.tabs__item_welcome
                                     a(href=`${href}`).tabs__link= title
                 .welcome__back
-                    include ../parts/_auth
+                    .auth
+                        .article-title.article-title_auth Авторизуйтесь
+                        .horizontal-line.horizontal-line_white.horizontal-line__auth
+                        form.auth__form
+                            .form__login-wrapper
+                                input.form__login(name="" type="text" placeholder="Логин")
+                                .login__sign
+                                    svg.login-sign__image
+                                        use(xlink:href="img/sprite.svg#login")
+                            .form__password-wrapper
+                                input.form__password(name="" type="password" placeholder="Пароль")
+                                .password__sign
+                                    svg.password-sign__image
+                                        use(xlink:href="img/sprite.svg#password")
+                            label.form__checkbox
+                                input(name="auth-human-checkbox" type="checkbox").form-checkbox__input
+                                .form-checkbox__custom
+                                .form-checkbox__title Я человек
+                            .form__human-title Вы точно не робот?
+                            .form__radio-buttons
+                                label.form__radio.form__radio_left
+                                    input(name="auth-human-radio" type="radio").form-radio__input
+                                    .form-radio__custom
+                                    .form-radio__title Да
+                                label.form__radio.form__radio_right
+                                    input(name="auth-human-radio" type="radio").form-radio__input
+                                    .form-radio__custom
+                                    .form-radio__title Не уверен
+                            .form__tabs
+                                ul.tabs__list.tabs__list_auth
+                                    li.tabs__item.tabs__item_auth.tabs__item_index
+                                        .tabs__link.tabs__link_auth На главную
+                                    li.tabs__item.tabs__item_auth
+                                        button(type="submit").tabs__link.tabs__link_auth Войти
             .welcome__footer Сергей Акмалов | создано с любовью в Loftschool | 2016
         script(src='js/vendor.js')
         script(src='js/main.js')

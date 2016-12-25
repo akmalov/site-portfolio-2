@@ -34,15 +34,12 @@
   &__container {
     position: relative;
     align-self: center;
-    width: 38rem;
-    height: 39.5rem;
-    min-height: 39.5rem;
     text-align: center;
-    z-index: 110;
-    perspective: 50rem;
+    perspective: 100rem;
+    height: 42.5rem;
+    width: 38rem;
 
     &_flip {
-
       margin: 22rem 0 1rem;
 
       @media (max-width: 1400px){
@@ -79,7 +76,6 @@
       }
 
       .welcome__back {
-        display: block;
         transform: rotateX(0deg);
         z-index: 110;
       }
@@ -103,12 +99,15 @@
     transform-style: preserve-3d;
     backface-visibility: hidden;
     background-color: rgba(18, 38, 32, 0.6);
+    transition: all 0.5s ease-in-out;
+    border-radius: 0.5rem;
+    width: 100%;
+    overflow: hidden;
   }
 
   &__front {
     z-index: 100;
-    width: 100%;
-    height: 100%;
+    height: 39.5rem;
     transform: rotateX(0deg);
   }
 
@@ -138,6 +137,25 @@
     fill: #90a09a;
   }
 
+  .tabs__list_welcome {
+    background: #608e54;
+  }
+
+  .tabs__item_welcome {
+    background: #608e54;
+    &:hover {
+      background: #4a803a;
+
+      .tabs__list {
+        background: #4a803a;
+      }
+    }
+  }
+
+  .tabs__link_welcome {
+    background: #608e54;
+  }
+
   &__footer {
     font-size: 1.6rem;
     align-self: center;
@@ -153,8 +171,18 @@
   }
 
   &__back {
-    display: none;
     z-index: 90;
     transform: rotateX(-180deg);
+    height: 42.5rem;
+
+    @include ipad {
+      width: 34.8rem;
+      height: 42.6rem;
+    }
+
+    @include iphone{
+      width: 30rem;
+      height: 42.4rem;
+    }
   }
 }
