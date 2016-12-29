@@ -8,7 +8,7 @@ var scrollMenu = (function () {
 
         positionArticle = function (element) {
             var len = element.length;
-            for (var i = 0; i < len; i++) {
+            for (let i = 0; i < len; i++) {
                 isPositionArticle[i] = {};
                 isPositionArticle[i].top = element
                         .eq(i)
@@ -31,7 +31,7 @@ var scrollMenu = (function () {
 
         scrollPage = function (e) {
             var scroll = window.pageYOffset;
-            for (var i = 0; i < isPositionArticle.length; i++) {
+            for (let i = 0; i < isPositionArticle.length; i++) {
                 if (scroll >= isPositionArticle[i].top && scroll <= isPositionArticle[i].bottom) {
                     $item
                         .eq(i)
@@ -82,7 +82,3 @@ var scrollMenu = (function () {
 })();
 
 scrollMenu.init();
-
-module.exports = {
-    scroll: scrollMenu
-};

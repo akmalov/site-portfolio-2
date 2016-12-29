@@ -1,8 +1,4 @@
-var menu = $('.fullscreen-menu').on('click', (function() {
+$('.fullscreen-menu').on('click', (function() {
     $(this).toggleClass('fullscreen-menu_active');
-    $(".overlay").toggleClass('overlay_open');
+    $('.overlay').toggleClass('overlay_open');
 }));
-
-module.exports = {
-    fullScreenMenu: menu
-};

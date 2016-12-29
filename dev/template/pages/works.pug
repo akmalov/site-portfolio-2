@@ -138,13 +138,19 @@ html
                 .contact
                     .article-title.article-title_contact Связаться со мной
                     .horizontal-line.horizontal-line_black.horizontal-line_contacts
-                    form.contact__form
-                        input.contact-form__name(name="" type="text" placeholder="Имя")
-                        input.contact-form__email(name="" type="text" placeholder="Email")
-                        textarea.contact-form__textarea(placeholder="Ваше сообщение")
+                    form(action="mail.php" method="post" enctype="multipart/form-data").contact__form
+                        input.contact-form__name(name="name" type="text" placeholder="Имя" required)
+                        input.contact-form__email(name="email" type="text" placeholder="Email" required)
+                        textarea.contact-form__textarea(name="usermessage" placeholder="Ваше сообщение" required)
                         .contact-form__tabs
-                            input.tabs__submit(name"" type="submit" value="Отправить")
-                            input.tabs__submit(name"" type="reset" value="Очистить")
+                            input.tabs__submit(name="send" type="submit" value="Отправить")
+                            input.tabs__submit(name="clear" type="reset" value="Очистить")
+                        .confirm#success
+                            .confirm__text Сообщение отправлено
+                            .confirm__close Закрыть
+                        .confirm#error
+                            .confirm__text Произошла ошибка
+                            .confirm__close
                 a.down-scroll.up-scroll(href='#')
                     svg.down-scroll__img.up-scroll__img
                         use(xlink:href="img/sprite.svg#arrow_down")

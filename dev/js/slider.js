@@ -99,7 +99,3 @@ var slider = (function() {
         });
     });
 }());
-
-module.exports = {
-    worksSlider: slider
-};

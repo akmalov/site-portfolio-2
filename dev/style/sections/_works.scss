@@ -617,6 +617,7 @@
     }
 
     &__form {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -631,7 +632,7 @@
         height: 4.5rem;
         margin-bottom: 2rem;
         border-radius: 2.2rem;
-        padding: 1.2rem;
+        padding: 1rem;
 
         @include ipad {
           width: 31rem;
@@ -688,6 +689,58 @@
 
     @include ipad {
       margin-bottom: 5rem;
+    }
+  }
+}
+
+.confirm {
+  position: absolute;
+  display: none;
+  text-align: center;
+  width: 28rem;
+  height: 11.2rem;
+  padding-top: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+
+  &_open {
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 200;
+  }
+
+  &__text {
+    margin-bottom: 0.7rem;
+  }
+
+  &__close {
+    width: 10.4rem;
+    height: 4rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &#success {
+
+    .confirm__close {
+      background: $light-green;
+    }
+  }
+
+  &#error {
+
+    .confirm__close {
+      background: red;
     }
   }
 }
